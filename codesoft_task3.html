@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Calculation Of Two Numbers</title>
+        <style>
+            body{
+                margin-left:550px;
+                margin-top:250px;
+                background-image: url('https://img.freepik.com/premium-vector/math-formulas-chalk-board-background-with-algebraic-geometric-graphs-functions-drawings-doodles-handwritten-mathematical-calculation-trigonometry-lesson-vector-exact-science_176411-4132.jpg');
+            }
+            #d1{
+                
+            }
+        </style>
+        <script>
+            function calc()
+            {
+                var n1=parseFloat(document.getElementById('n1').value);
+                var n2=parseFloat(document.getElementById('n2').value);
+                var oper=document.getElementById('operators').value;
+                if(oper === '+')
+                {
+                    document.getElementById('result').value=n1+n2;
+                }
+                if(oper === '-')
+                {
+                    document.getElementById('result').value=n1-n2;
+                }
+                if(oper === 'x')
+                {
+                    document.getElementById('result').value=n1*n2;
+                }
+                if(oper === '/')
+                {
+                    document.getElementById('result').value=n1/n2;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h4></h4><u><i>CALCULATOR</i></u></h4><br><br>
+        Number 1 : <input type="text" id="n1"/><br><br/>
+        Number 2 : <input type="text" id="n2"/><br><br/>
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select>
+        <div id="d1">
+        <button onclick="calc();">CALCULATE</button><br><br>
+        <input type="text" id="result"/>
+        </div>
+    </body>
+</html>
